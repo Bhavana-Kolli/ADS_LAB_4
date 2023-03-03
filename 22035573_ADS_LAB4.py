@@ -30,3 +30,17 @@ df_counts.to_csv("wordcount.csv")
 print(len(df_counts))
 print(df_counts)
 print(df_counts.iloc[100:120])
+
+print("number of words:", len(all_words))
+
+nchar = 0
+for word in all_words:
+    nchar = nchar + len(word)
+print("number of characters:", nchar)
+
+length = 0
+for word in all_words:
+    if len(word) > length:       
+        length = len(word)
+        lword = word
+print("The longest word is ", lword, ". It has ", length, " characters.", sep="")
